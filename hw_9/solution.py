@@ -70,4 +70,3 @@ try:
 
 except FileNotFoundError:
     print(f"Ошибка: Файл {input_filename} не найден.")
-
