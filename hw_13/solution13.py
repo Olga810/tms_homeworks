@@ -21,6 +21,8 @@ try:
 except ValueError:
     print("Ошибка: необходимо ввести целое число.")
 
+from typing import Generator
+
 
 def cycle_generator():
     """Генератор бесконечной циклической последовательности чисел 1-2-3."""
@@ -38,7 +40,7 @@ def main() -> None:
             return
             
         # Инициализация генератора
-        gen: int = cycle_generator()
+        gen: Generator[int, None, None] = cycle_generator()
         
         # Вывод заданного количества чисел
         for _ in range(count):
